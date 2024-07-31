@@ -113,8 +113,10 @@ def get_website(company_name, driver):
 # options = webdriver.ChromeOptions()
 # options.debugger_address = "127.0.0.1:9222"
 # driver = webdriver.Chrome(options=options)
-
-driver = webdriver.Chrome()
+print("ready")
+from selenium.webdriver.chrome.service import Service
+service_obj=Service(r"c:\chromedriver.exe")
+driver=webdriver.Chrome(service=service_obj)
 
 # "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\absab\AppData\Local\Google\Chrome\User Data\Profile 1"
 
@@ -130,15 +132,17 @@ companies = df.to_dict(orient='records')
 # Iterate over each company name in the Excel sheet
 count = 1
 for row in companies:
-    website = get_website(row['company'], driver)
+    if count >= 20:
+        break
+    website = get_website(row['Organsiation'], driver)
     if website['end']:
         break
     if website['url']:
-        print(f"{count}) Website found for {row['company']}\n")
+        print(f"{count}) Website found for {row['Organsiation']}\n")
         row['Website'] = website['url']  # Assuming the website is in the second colum
         row['match'] = website['match']  # Assuming the website is in the second colum
     else:
-        print(f"{count}) Website not found for {row['company']}\n")
+        print(f"{count}) Website not found for {row['Organsiation']}\n")
     count += 1
 
 # Save the updated DataFrame to a new Excel file
