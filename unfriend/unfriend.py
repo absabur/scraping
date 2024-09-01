@@ -15,27 +15,39 @@ import pyperclip, pyautogui
 # chrome://version/
 # https://chatgpt.com/c/dcbf62ec-e118-4299-a10c-4c182966cd8c
 
-more = driver.find_elements(By.XPATH, '//div[@aria-label="More"]')
+# more = driver.find_elements(By.XPATH, '//div[@aria-label="More"]')
 
 
 profile = 1
-for p in more:
-    try:
-        p.click()
-        time.sleep(0.01)
-        unf = driver.find_element(By.XPATH, '//div[@role="menuitem"][4]')
-        unf.click()
-        time.sleep(0.01)
-        con = driver.find_element(By.XPATH, '//div[@aria-label="Confirm"]')
-        con.click()
-        time.sleep(0.01)
-        profile += 1
+# for p in more:
+#     try:
+#         p.click()
+#         time.sleep(0.1)
+#         unf = driver.find_element(By.XPATH, '//div[@role="menuitem"][4]')
+#         unf.click()
+#         time.sleep(0.1)
+#         con = driver.find_element(By.XPATH, '//div[@aria-label="Confirm"]')
+#         con.click()
+#         time.sleep(0.1)
+#         profile += 1
+        
 
+#     except:
+#         print("No profile found.")
+#         # val = input("SType (e) for end:  ")
+#         # if val == "e":
+#         #     break
+
+
+
+dels = driver.find_elements(By.XPATH, '//div[@aria-label="Delete"]')
+for de in dels:
+    try:
+        de.click()
+        profile += 1
+        time.sleep(0.3)
     except:
-        print("No profile found.")
-        # val = input("SType (e) for end:  ")
-        # if val == "e":
-        #     break
+        pass
 
 print(f"{profile} unfriend")
 driver.quit()

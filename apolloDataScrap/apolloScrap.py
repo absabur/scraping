@@ -17,21 +17,27 @@ import time
 
 
 data = []
+fileName = input("Enter file name: ")
 lead = int(input("How many lead do you have: "))
 page = math.ceil(lead/25)
 print("====================")
 print("Number of Pages: ",page)
 print("====================")
 for p in range(1, page+1):
-    driver.get(f"https://app.apollo.io/#/people?finderViewId=5b8050d050a3893c382e9360&prospectedByCurrentTeam[]=yes&page={p}&sortByField=person_name.raw&sortAscending=true&finderTableLayoutId=6678a7897c0e2903749e0807")
-    print("Scraping data of page: ",p)
+    if p == 25 or p == 50 or p == 75:
+        driver.refresh()
+        time.sleep(4)
+    driver.get(f"https://app.apollo.io/#/people?finderViewId=6674b20eecfedd000184539f&prospectImportIds[]=66c9a99b1aaa11019bb84abf&page={p}&prospectedByCurrentTeam[]=yes&sortByField=person_name.raw&sortAscending=true")
+    time.sleep(1)
+    print(f"Current Page: {p} | {page}")
     WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located((By.XPATH, '//table//tr'))
+        EC.presence_of_element_located((By.XPATH, './/table//tr[@data-cy="SelectableTableRow"]//a'))
     )
     if p == 1:
         time.sleep(5)
     soup = BeautifulSoup(driver.page_source, 'html.parser')
     rows = soup.find_all('tr')
+    # print(f"{len(rows)-1} person")
     for row in rows:
         single = {}
 
@@ -111,12 +117,15 @@ for p in range(1, page+1):
         except:
             pass
 
-        data.append(single)
+        if len(single) == 0:
+            pass
+        else:
+            data.append(single)
         
 driver.quit()
 
 df = pd.DataFrame(data)
 
-person_path = f'apollo.xlsx'
+person_path = f'{fileName}({lead}).xlsx'
 
 df.to_excel(person_path, index=False)
