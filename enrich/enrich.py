@@ -10,6 +10,12 @@ import time, random
 import pyperclip, pyautogui
 
 
+# "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\absab\AppData\Local\Google\Chrome\User Data\Profile 1"
+# %LOCALAPPDATA%
+# chrome://version/
+# https://chatgpt.com/c/dcbf62ec-e118-4299-a10c-4c182966cd8c
+
+
 # print(pyautogui.position())
 
 for i in range(100):
@@ -54,8 +60,12 @@ for i in range(100):
     enrich_emails_link.click()
     time.sleep(2)
     pyautogui.click(716, 305)
-    pyautogui.click(716, 355)
+    pyautogui.click(716, 320)
+    pyautogui.click(716, 345)
+    pyautogui.click(716, 360)
+    pyautogui.click(716, 375)
     pyautogui.click(716, 390)
+    pyautogui.click(716, 405)
 
 
 

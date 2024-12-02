@@ -6,7 +6,7 @@ main_sheet = pd.read_excel('sh1.xlsx')
 additional_sheet = pd.read_excel('sh2.xlsx')
 
 # Merge the sheets based on the 'email' column
-combined_sheet = pd.merge(main_sheet, additional_sheet, on='Email', how='left')
+combined_sheet = pd.merge(main_sheet, additional_sheet, on='name', how='left')
 
 # Save the combined sheet to a new file
 combined_sheet.to_excel('combined_sheet.xlsx', index=False)

@@ -1,0 +1,758 @@
+[
+    {
+        "_id": "671c0b927343984e7bfda0ab",
+        "name": "Brand",
+        "categoryId": "671bc77c7343984e7bb6d253",
+        "categoryIdValue": "General",
+        "placeholder": "Single"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ac",
+        "name": "Model",
+        "categoryId": "671bc77c7343984e7bb6d253",
+        "categoryIdValue": "General",
+        "placeholder": "Galaxy S23 Ultra"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ad",
+        "name": "Device Type",
+        "categoryId": "671bc77c7343984e7bb6d253",
+        "categoryIdValue": "General",
+        "placeholder": "Smart Phone"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ae",
+        "name": "Release Date",
+        "categoryId": "671bc77c7343984e7bb6d253",
+        "categoryIdValue": "General",
+        "placeholder": "17 January 2023"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0af",
+        "name": "Status",
+        "categoryId": "671bc77c7343984e7bb6d253",
+        "categoryIdValue": "General",
+        "placeholder": "Available"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b0",
+        "name": "Operating System",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "Android"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b1",
+        "name": "OS Version",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "v13"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b2",
+        "name": "User Interface",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "Samsung One UI"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b3",
+        "name": "Chipset",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "Qualcomm SM8550-AC Snapdragon 8 Gen 2 (4 nm)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b4",
+        "name": "CPU",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A510)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b5",
+        "name": "CPU Cores",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "Octa core"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b6",
+        "name": "Architecture",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "64 bit"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b7",
+        "name": "Fabrication",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "4 nm"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b8",
+        "name": "GPU",
+        "categoryId": "671bc77c7343984e7bb6d254",
+        "categoryIdValue": "Hardware & Software",
+        "placeholder": "Adreno 740"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0b9",
+        "name": "Display Type",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "Dynamic AMOLED 2X"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ba",
+        "name": "Screen Size",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "6.8 inches (17.27 cm)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0bb",
+        "name": "Resolution",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "1440x3088 px (QHD+)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0bc",
+        "name": "Aspect Ratio",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "19.3:9"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0bd",
+        "name": "Pixel Density",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "500"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0be",
+        "name": "Screen to Body Ratio",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "89.99 %"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0bf",
+        "name": "Screen Protection",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "Corning Gorilla Glass, Glass Victus 2"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c0",
+        "name": "Bezel-less Display",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "Yes with punch-hole display"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c1",
+        "name": "Touch Screen",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "Capacitive Touchscreen, Multi-touch"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c2",
+        "name": "Brightness",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "1750"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c3",
+        "name": "HDR 10 / HDR + support",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "HDR 10+"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c4",
+        "name": "Refresh Rate",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "120 Hz"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c5",
+        "name": "Notch",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "Punch-hole"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c6",
+        "name": "Camera Setup",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Quad"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c7",
+        "name": "Resolution",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "200 MP f/1.7, Wide Angle, Primary Camera, 12 MP f/2.2, Ultra-Wide Angle Camera, 10 MP f/2.4, Telephoto Camera, 10 MP f/4.9 Camera"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c8",
+        "name": "Sensor",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "S5KHP2, ISO-CELL"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0c9",
+        "name": "Autofocus",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Phase Detection autofocus, Laser autofocus"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ca",
+        "name": "OIS",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0cb",
+        "name": "Flash",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "LED Flash"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0cc",
+        "name": "Image Resolution",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "14500 x 13650 Pixels"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0cd",
+        "name": "Settings",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Exposure compensation, ISO control"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ce",
+        "name": "Zoom",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "10x optical zoom"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0cf",
+        "name": "Shooting Modes",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Continuous Shooting, High Dynamic Range mode (HDR), SuperMoon"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d0",
+        "name": "Aperture",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "f/1.7"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d1",
+        "name": "Camera Features",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Auto Flash, Face detection, Touch to focus, Slo-motion, Ultra Steady Video, Video HDR, Bokeh portrait video, Video Pro Mode, Stereo recording"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d2",
+        "name": "Video Recording",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "7680x4320, 3840x2160, 1920x1080"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d3",
+        "name": "Video FPS",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "240 fps"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d4",
+        "name": "Image Stabilization",
+        "categoryId": "671bc77c7343984e7bb6d256",
+        "categoryIdValue": "Primary Camera",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d5",
+        "name": "Camera Setup",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "Single"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d6",
+        "name": "Resolution",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "12 MP f/2.2, Wide Angle, Primary Camera"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d7",
+        "name": "Autofocus",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "Phase Detection autofocus"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d8",
+        "name": "Video Recording",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "3840x2160, 1920x1080"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0d9",
+        "name": "Video FPS",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "240 fps"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0da",
+        "name": "Aperture",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "f/2.2"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0db",
+        "name": "Height",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "163.4 mm"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0dc",
+        "name": "Width",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "78.1 mm"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0dd",
+        "name": "Thickness",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "8.9 mm"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0de",
+        "name": "Weight",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "233 grams"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0df",
+        "name": "Build",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "Back: Gorilla Glass Victus 2"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e0",
+        "name": "Colors",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "Green, Red, Phantom Black, Cream, Graphite, Sky Blue, Lime, Light Blue"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e1",
+        "name": "Waterproof",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "Water resistant (up to 30 minutes in a depth of 1.5 meter)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e2",
+        "name": "IP Rating",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "IP68"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e3",
+        "name": "Ruggedness",
+        "categoryId": "671bc77c7343984e7bb6d258",
+        "categoryIdValue": "Design",
+        "placeholder": "Dust proof"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e4",
+        "name": "Battery type",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Li-Ion (Lithium Ion)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e5",
+        "name": "Capacity",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "5000"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e6",
+        "name": "Wireless Charging",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e7",
+        "name": "Quick Charging",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Fast, 45W: 65 % in 30 minutes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e8",
+        "name": "Placement",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Non-removable"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0e9",
+        "name": "USB Type-C",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "USB Type-C 3.2"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ea",
+        "name": "Internal Storage",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "256 GB"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0eb",
+        "name": "Storage Type",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "UFS 4.0"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ec",
+        "name": "USB OTG",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ed",
+        "name": "RAM",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "12 GB"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ee",
+        "name": "RAM Type",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "LPDDR5X"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ef",
+        "name": "Network",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "2G, 3G, 4G, 5G"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f0",
+        "name": "SIM Slot",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Dual SIM, GSM+GSM"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f1",
+        "name": "SIM Size",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "SIM1: Nano, SIM2: Nano"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f2",
+        "name": "EDGE",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Available"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f3",
+        "name": "GPRS",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Available"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f4",
+        "name": "VoLTE",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f5",
+        "name": "Speed",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "HSPA, LTE-A (up to 7CA), 5G"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f6",
+        "name": "SAR Value",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Head: 1.12 W/kg, Body: 0.92 W/kg"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f7",
+        "name": "WLAN",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Wi-Fi 6 (802.11 a/b/g/n/ac/ax) 5GHz, MIMO"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f8",
+        "name": "Bluetooth",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "v5.3"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0f9",
+        "name": "GPS",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Yes with A-GPS, Glonass"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0fa",
+        "name": "Wi-fi Hotspot",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0fb",
+        "name": "NFC",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0fc",
+        "name": "USB",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Mass storage device, USB charging"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0fd",
+        "name": "Light Sensor",
+        "categoryId": "671bc77c7343984e7bb6d25c",
+        "categoryIdValue": "Sensors & security",
+        "placeholder": "Light sensor, Proximity sensor, Accelerometer, Barometer, Compass, Gyroscope"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0fe",
+        "name": "Fingerprint Sensor",
+        "categoryId": "671bc77c7343984e7bb6d25c",
+        "categoryIdValue": "Sensors & security",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda0ff",
+        "name": "Finger Sensor Position",
+        "categoryId": "671bc77c7343984e7bb6d25c",
+        "categoryIdValue": "Sensors & security",
+        "placeholder": "On-screen"
+    },
+    {
+        "_id": "671c0b927343984e7bfda100",
+        "name": "Finger Sensor Type",
+        "categoryId": "671bc77c7343984e7bb6d25c",
+        "categoryIdValue": "Sensors & security",
+        "placeholder": "Ultrasonic"
+    },
+    {
+        "_id": "671c0b927343984e7bfda101",
+        "name": "Face Unlock",
+        "categoryId": "671bc77c7343984e7bb6d25c",
+        "categoryIdValue": "Sensors & security",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda102",
+        "name": "Loudspeaker",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda103",
+        "name": "Audio Jack",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "USB Type-C"
+    },
+    {
+        "_id": "671c0b927343984e7bfda104",
+        "name": "Video",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "8K@24/30fps, 4K@30/60fps, 1080p@30/60/240fps, 1080p@960fps, HDR10+, stereo sound rec., gyro-EIS"
+    },
+    {
+        "_id": "671c0b927343984e7bfda105",
+        "name": "Document Reader",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda106",
+        "name": "Made By",
+        "categoryId": "671bc77c7343984e7bb6d25e",
+        "categoryIdValue": "More",
+        "placeholder": "Korea"
+    },
+    {
+        "_id": "671c0b927343984e7bfda107",
+        "name": "Features",
+        "categoryId": "671bc77c7343984e7bb6d25e",
+        "categoryIdValue": "More",
+        "placeholder": "Accelerometer, gyro, proximity, compass, barometer, Samsung DeX, Samsung Wireless DeX (desktop experience support), Ultra Wideband (UWB) support"
+    },
+    {
+        "_id": "671c0b927343984e7bfda108",
+        "name": "Flash",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "Retina Flash"
+    },
+    {
+        "_id": "671c0b927343984e7bfda109",
+        "name": "Reverse Charging",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda10a",
+        "name": "FM Radio",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda10b",
+        "name": "Alert Types",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "Vibration, MP3, WAV ringtones"
+    },
+    {
+        "_id": "671c0b927343984e7bfda10c",
+        "name": "Camera Features",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "Fixed Focus"
+    },
+    {
+        "_id": "671c0b927343984e7bfda10d",
+        "name": "Infrared",
+        "categoryId": "671bc77c7343984e7bb6d25b",
+        "categoryIdValue": "Network & Connectivity",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda10e",
+        "name": "Sensor",
+        "categoryId": "671bc77c7343984e7bb6d257",
+        "categoryIdValue": "Selfie Camera",
+        "placeholder": "3.6\" sensor size"
+    },
+    {
+        "_id": "671c0b927343984e7bfda10f",
+        "name": "Features",
+        "categoryId": "671bc77c7343984e7bb6d255",
+        "categoryIdValue": "Display",
+        "placeholder": "Always-on display"
+    },
+    {
+        "_id": "671c0b927343984e7bfda110",
+        "name": "Audio Features",
+        "categoryId": "671bc77c7343984e7bb6d25d",
+        "categoryIdValue": "Multimedia",
+        "placeholder": "Dolby Atmos"
+    },
+    {
+        "_id": "671c0b927343984e7bfda111",
+        "name": "Talk Time",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Up to 39 Hours(4G)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda112",
+        "name": "User Available Storage",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "Up to 100 GB"
+    },
+    {
+        "_id": "671c0b927343984e7bfda113",
+        "name": "Expandable Memory",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "Up to 1 TB"
+    },
+    {
+        "_id": "671c0b927343984e7bfda114",
+        "name": "Music Play",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Yes"
+    },
+    {
+        "_id": "671c0b927343984e7bfda115",
+        "name": "Standby",
+        "categoryId": "671bc77c7343984e7bb6d259",
+        "categoryIdValue": "Battery",
+        "placeholder": "Up to 775 Hours(2G)"
+    },
+    {
+        "_id": "671c0b927343984e7bfda116",
+        "name": "Virtual RAM",
+        "categoryId": "671bc77c7343984e7bb6d25a",
+        "categoryIdValue": "Memory",
+        "placeholder": "4 GB"
+    }
+]

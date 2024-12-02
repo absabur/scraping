@@ -1,0 +1,134 @@
+{
+    "Battery": [
+        "Battery type",
+        "Capacity",
+        "Wireless Charging",
+        "Quick Charging",
+        "Placement",
+        "USB Type-C",
+        "Reverse Charging",
+        "Talk Time",
+        "Music Play",
+        "Standby"
+    ],
+    "Design": [
+        "Height",
+        "Width",
+        "Thickness",
+        "Weight",
+        "Build",
+        "Colors",
+        "Waterproof",
+        "IP Rating",
+        "Ruggedness"
+    ],
+    "Display": [
+        "Display Type",
+        "Screen Size",
+        "Resolution",
+        "Aspect Ratio",
+        "Pixel Density",
+        "Screen to Body Ratio",
+        "Screen Protection",
+        "Bezel-less Display",
+        "Touch Screen",
+        "Brightness",
+        "HDR 10 / HDR + support",
+        "Refresh Rate",
+        "Notch",
+        "Features"
+    ],
+    "General": [
+        "Brand",
+        "Model",
+        "Device Type",
+        "Release Date",
+        "Status"
+    ],
+    "Hardware & Software": [
+        "Operating System",
+        "OS Version",
+        "User Interface",
+        "Chipset",
+        "CPU",
+        "CPU Cores",
+        "Architecture",
+        "Fabrication",
+        "GPU"
+    ],
+    "Memory": [
+        "Internal Storage",
+        "Storage Type",
+        "USB OTG",
+        "RAM",
+        "RAM Type",
+        "User Available Storage",
+        "Expandable Memory",
+        "Virtual RAM"
+    ],
+    "More": [
+        "Made By",
+        "Features"
+    ],
+    "Multimedia": [
+        "Loudspeaker",
+        "Audio Jack",
+        "Video",
+        "Document Reader",
+        "FM Radio",
+        "Alert Types",
+        "Audio Features"
+    ],
+    "Network & Connectivity": [
+        "Network",
+        "SIM Slot",
+        "SIM Size",
+        "EDGE",
+        "GPRS",
+        "VoLTE",
+        "Speed",
+        "SAR Value",
+        "WLAN",
+        "Bluetooth",
+        "GPS",
+        "Wi-fi Hotspot",
+        "NFC",
+        "USB",
+        "Infrared"
+    ],
+    "Primary Camera": [
+        "Camera Setup",
+        "Resolution",
+        "Sensor",
+        "Autofocus",
+        "OIS",
+        "Flash",
+        "Image Resolution",
+        "Settings",
+        "Zoom",
+        "Shooting Modes",
+        "Aperture",
+        "Camera Features",
+        "Video Recording",
+        "Video FPS",
+        "Image Stabilization"
+    ],
+    "Selfie Camera": [
+        "Camera Setup",
+        "Resolution",
+        "Autofocus",
+        "Video Recording",
+        "Video FPS",
+        "Aperture",
+        "Flash",
+        "Camera Features",
+        "Sensor"
+    ],
+    "Sensors & security": [
+        "Light Sensor",
+        "Fingerprint Sensor",
+        "Finger Sensor Position",
+        "Finger Sensor Type",
+        "Face Unlock"
+    ]
+}

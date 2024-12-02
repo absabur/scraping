@@ -30,7 +30,7 @@ import time
 import logging
 
 
-last_post = 409
+last_post = 483
 
 
 def auto_like(username, password, last_post):

@@ -5,7 +5,7 @@ import os
 directory = os.getcwd()  # Change this to your directory
 
 # Define the common columns to keep
-common_columns = ['Name', 'Email', 'PersonLinkedIn', 'CompanyName', 'Website']  # Replace with your actual column names
+common_columns = ['Name', 'Email', 'PersonLinkedIn', 'CompanyName', 'Website', 'key1']  # Replace with your actual column names
 
 # Initialize an empty list to store the filtered DataFrames
 dfs = []

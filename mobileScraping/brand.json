@@ -1,0 +1,246 @@
+[
+    {
+        "_id": "671c14ed7343984e7b0748b1",
+        "name": "Apple"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b2",
+        "name": "Xiaomi"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b3",
+        "name": "Oppo"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b4",
+        "name": "Samsung"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b5",
+        "name": "Vivo"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b6",
+        "name": "Realme"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b7",
+        "name": "Infinix"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b8",
+        "name": "Tecno"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748b9",
+        "name": "Google"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748ba",
+        "name": "Walton"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748bb",
+        "name": "OnePlus"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748bc",
+        "name": "Itel"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748bd",
+        "name": "Honor"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748be",
+        "name": "Motorola"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748bf",
+        "name": "Nokia"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c0",
+        "name": "Nothing"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c1",
+        "name": "Symphony"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c2",
+        "name": "Asus"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c3",
+        "name": "Benco"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c4",
+        "name": "Helio"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c5",
+        "name": "ZTE"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c6",
+        "name": "Meizu"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c7",
+        "name": "Huawei"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c8",
+        "name": "HTC"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748c9",
+        "name": "Lava"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748ca",
+        "name": "Sony"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748cb",
+        "name": "Lenovo"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748cc",
+        "name": "Maximus"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748cd",
+        "name": "TECNO"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748ce",
+        "name": "TCL"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748cf",
+        "name": "LG"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d0",
+        "name": "HMD"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d1",
+        "name": "Doogee"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d2",
+        "name": "Micromax"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d3",
+        "name": "Umidigi"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d4",
+        "name": "We"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d5",
+        "name": "Coolpad"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d6",
+        "name": "Nio"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d7",
+        "name": "Panasonic"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d8",
+        "name": "Alcatel"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748d9",
+        "name": "Allview"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748da",
+        "name": "WE"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748db",
+        "name": "Oneplus"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748dc",
+        "name": "OnePlus 2"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748dd",
+        "name": "LAVA"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748de",
+        "name": "WE X2"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748df",
+        "name": "Okapia"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e0",
+        "name": "Mycell"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e1",
+        "name": "maximus"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e2",
+        "name": "Microsoft"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e3",
+        "name": "Ulefone"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e4",
+        "name": "Wiko"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e5",
+        "name": "Blackview"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e6",
+        "name": "FreeYond"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e7",
+        "name": "Kingstar"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e8",
+        "name": "Cubot"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748e9",
+        "name": "DOOGEE"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748ea",
+        "name": "Celkon"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748eb",
+        "name": "Bengal"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748ec",
+        "name": "Oukitel"
+    },
+    {
+        "_id": "671c14ed7343984e7b0748ed",
+        "name": "Oscal"
+    }
+]

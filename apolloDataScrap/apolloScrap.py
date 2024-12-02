@@ -27,7 +27,7 @@ for p in range(1, page+1):
     if p == 25 or p == 50 or p == 75:
         driver.refresh()
         time.sleep(4)
-    driver.get(f"https://app.apollo.io/#/people?finderViewId=6674b20eecfedd000184539f&prospectImportIds[]=66c9a99b1aaa11019bb84abf&page={p}&prospectedByCurrentTeam[]=yes&sortByField=person_name.raw&sortAscending=true")
+    driver.get(f"https://app.apollo.io/#/people?prospectImportIds[]=66dff2105fa70d01b27c4a5d&finderViewId=5b6dfc5a73f47568b2e5f11c&sortByField=person_name.raw&sortAscending=true&page={p}&prospectedByCurrentTeam[]=yes")
     time.sleep(1)
     print(f"Current Page: {p} | {page}")
     WebDriverWait(driver, 30).until(

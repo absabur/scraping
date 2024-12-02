@@ -91,7 +91,7 @@ def postToBarlix(username, password, text, path, page, pageText, pagePath):
         if pageText != "" or pagePath != "":
             if text != "" or path != "":
                 # input("next=============================")
-                time.sleep(150)
+                time.sleep(10)
             # Wait for the post box to be visible
             WebDriverWait(driver, 20).until(
                 EC.presence_of_element_located(
@@ -152,7 +152,7 @@ def postToBarlix(username, password, text, path, page, pageText, pagePath):
         driver.save_screenshot(f"error_screenshot_{username}.png")
 
     # input("next=============================")
-    time.sleep(150)
+    time.sleep(10)
 
 
 from selenium import webdriver
@@ -237,6 +237,15 @@ usernamePasswords = [
         "pagePath": "",
     },
 ]
+
+# asdf=f"
+# generate an image of polo shirt jersey coding, microcontroller theme for cse students. 
+# 'CST 21-22' in front left, 
+# 'logo' in front right, 
+# 'Name' in back top, 
+# 'Bogura polytechnic Institute' in back bottom. 
+# colors are #001203, #45ecff, black, white and more.
+# "
 
 # Open the website and post for each account
 for account in usernamePasswords:
