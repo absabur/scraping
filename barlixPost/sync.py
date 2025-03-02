@@ -29,11 +29,13 @@ options.add_argument(
 )
 
 
-last_post = 728
+last_post = 1109
 
 
 def auto_like(username, password, last_post):
     driver = webdriver.Chrome(service=service_obj, options=options)
+    # driver.set_window_position(-1300, 40)
+    # driver.set_window_size(1300, 980)  # Example: width=800px, height=600px
     logging.info(f"Attempting to post for user: {username}")
 
     driver.get("https://www.barlix.com/logout/")

@@ -1,14 +1,20 @@
 import pandas as pd
 
-# Replace 'sheet1.xlsx' and 'sheet2.xlsx' with the path to your actual files
-# If your data is in CSV format, you can use pd.read_csv instead
+# Load the sheets
 main_sheet = pd.read_excel('sh1.xlsx')
 additional_sheet = pd.read_excel('sh2.xlsx')
 
-# Merge the sheets based on the 'email' column
-combined_sheet = pd.merge(main_sheet, additional_sheet, on='name', how='left')
+# Ensure unique 'LINKEDIN' keys in both sheets
+main_sheet = main_sheet.drop_duplicates(subset=['LINKEDIN'])
+additional_sheet = additional_sheet.drop_duplicates(subset=['LINKEDIN'])
+
+# Merge the sheets based on the 'LINKEDIN' column
+combined_sheet = pd.merge(main_sheet, additional_sheet, on='LINKEDIN', how='left')
+
+# Remove any duplicates in the final combined sheet if necessary
+combined_sheet = combined_sheet.drop_duplicates(subset=['LINKEDIN'], keep='first')
 
 # Save the combined sheet to a new file
 combined_sheet.to_excel('combined_sheet.xlsx', index=False)
 
-print("Sheets have been successfully combined.")
+print("Sheets have been successfully combined without duplicates.")

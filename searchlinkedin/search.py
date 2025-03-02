@@ -1,22 +1,29 @@
 from selenium import webdriver
-options = webdriver.ChromeOptions()
-options.debugger_address = "127.0.0.1:9222"
-driver = webdriver.Chrome(options=options)
 from selenium.webdriver.common.by import By
-import pandas as pd
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import math
+import pandas as pd
 import time
+import re
+import pyautogui
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Initialize WebDriver with debugging options
+options = webdriver.ChromeOptions()
+options.debugger_address = "127.0.0.1:9222"
+driver = webdriver.Chrome(options=options)
 
 # "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\Users\absab\AppData\Local\Google\Chrome\User Data\Profile 1"
 # %LOCALAPPDATA%
 # chrome://version/
 # https://chatgpt.com/c/dcbf62ec-e118-4299-a10c-4c182966cd8c
 
-
 def detect_recaptcha(soup):
+    print("=======================")
     """Check if a reCAPTCHA is present on the page."""
     # Check for common reCAPTCHA elements
     if (
@@ -28,86 +35,111 @@ def detect_recaptcha(soup):
         return True
     return False
 
-
-def get_first_linkedin_profile(driver, keyword):
+def get_first_linkedin_profile(keyword):
     """Search Google for a keyword and return the first valid LinkedIn profile link."""
+    data = {
+        "linkedinProfile": "",
+        "linkedinPost": "",
+        "rocket": "",
+        "match_percentage": "",
+        "title": ""
+    }
+
     try:
         driver.get(f"https://www.google.com/search?q={keyword}")
-
+        
         soup = BeautifulSoup(driver.page_source, "html.parser")
-        if detect_recaptcha(soup):
+        count = 1
+        
+        while detect_recaptcha(soup):
             print("CAPTCHA detected. Please solve it manually.")
-            input("Press Enter to continue after solving the CAPTCHA...")
+            if count >= 3:
+                pyautogui.click(1373,10)
+                time.sleep(1)
+                
+            time.sleep(0.5)
+            pyautogui.click(1337,142)
+            time.sleep(1)
+            pyautogui.click(1480,301)
+            time.sleep(5)
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            count+=1
+            
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//a[@jsname="UWckNb"]')))
 
-        # Find all search result links
-        results = driver.find_elements(By.XPATH, "//a")
-        print(len(results))
-
+        results = driver.find_elements(By.XPATH, '//a[@jsname="UWckNb"]')
         if not results:
-            print("No results found. Check XPath or page loading issues.")
-            return "No LinkedIn profile found"
+            logging.warning("No results found. Check XPath or page loading issues.")
+            return data
 
-        # Check each link to see if it is a valid LinkedIn profile
+        def preprocess(text):
+            """Preprocess text for keyword matching."""
+            cleaned_text = re.sub(r'[^a-zA-Z\s]', '', text)
+            return set(cleaned_text.lower().split())
+
         for result in results:
             url = result.get_attribute("href")
-            if url:
-                if "linkedin.com/posts/" in url:
-                    print(f"Valid LinkedIn profile found: {url}")
-                    return url
-        return (
-            "No LinkedIn profile found"  # No valid LinkedIn profile in search results
-        )
-    except Exception as e:
-        return f"Error: {e}"
+            if not url:
+                continue
 
+            if "linkedin.com/in/" in url:
+                title = result.find_element(By.XPATH, './/h3').text
+                keywords1 = preprocess(title)
+                keywords2 = preprocess(keyword)
+                matching_keywords = [kw for kw in keywords2 if kw in keywords1]
+                match_percentage = f"{round((len(matching_keywords) / len(keywords2)) * 100, 2)}%"
+                data.update({
+                    "linkedinProfile": url,
+                    "match_percentage": match_percentage,
+                    "title": title
+                })
+                break
+
+        for result in results:
+            url = result.get_attribute("href")
+            if url and "linkedin.com/posts/" in url:
+                data["linkedinPost"] = url
+                break
+
+        for result in results:
+            url = result.get_attribute("href")
+            if url and "rocketreach.co" in url:
+                data["rocket"] = url
+                break
+
+    except Exception as e:
+        logging.error(f"Error processing keyword {keyword}: {e}")
+
+    return data
 
 def process_keywords(input_file, output_file):
     """Process keywords and save LinkedIn profile URLs to an output file."""
-
-    keywords_df = pd.read_excel(input_file)
-
-    # Ensure the file has the required columns
-    if "name" not in keywords_df.columns or "title" not in keywords_df.columns:
-        raise ValueError("Input Excel must have 'name' and 'title' columns")
-
-    # Initialize WebDriver
-
-    # List to store results
-    results = []
-
     try:
-        count = 0
-        for _, row in keywords_df.iterrows():
-            # if count >= 50:  # Stop processing after reaching the limit
+        keywords_df = pd.read_excel(input_file)
+        if "Search" not in keywords_df.columns:
+            raise ValueError("Input Excel must have a 'Search' column")
+
+        results = []
+        for count, (_, row) in enumerate(keywords_df.iterrows()):
+            # if count >= 5:  # Limit to 5 iterations for testing
             #     break
-            name = row["name"]
-            title = row["title"]
-            image = row["image"]
 
-            # Skip rows with missing values
-            if pd.isna(name) or pd.isna(title):
-                continue
+            keyword = row["Search"]
+            logging.info(f"Processing keyword ({count}): {keyword}")
+            url_data = get_first_linkedin_profile(keyword)
+            results.append({**row.to_dict(), **url_data})
 
-            keyword = f"{name} {title}"
-            print(f"Processing keyword: {keyword}")
-            url = get_first_linkedin_profile(driver, keyword)
-            if url == "end":
-                break
-            results.append({"name": name, "title": title, "LinkedIn URL": url, "image": image})
-            count += 1
-
-        # Create a DataFrame for the results
         results_df = pd.DataFrame(results)
-
-        # Write the results to a new Excel file
         results_df.to_excel(output_file, index=False, engine="openpyxl")
-        print(f"Results saved to {output_file}")
+        logging.info(f"Results saved to {output_file}")
+
+    except Exception as e:
+        logging.error(f"Error processing keywords: {e}")
 
     finally:
-        # Close the browser
         driver.quit()
 
 # Example usage
-input_excel = "keywords.xlsx"  # Input file with keywords
-output_excel = "linkedin_results.xlsx"  # Output file to save URLs
+input_excel = "input.xlsx"  # Input file with keywords
+output_excel = "output.xlsx"  # Output file to save URLs
 process_keywords(input_excel, output_excel)
