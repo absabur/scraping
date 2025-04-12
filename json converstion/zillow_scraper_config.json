@@ -1,0 +1,3 @@
+{"_id":"zillow_scraper_1","startUrl":[
+  
+    ],"selectors":[{"id":"zillow_name","multiple":false,"parentSelectors":["_root"],"regex":"","selector":"h1.gmdEgd","type":"SelectorText"},{"id":"zillow_company","multiple":false,"parentSelectors":["_root"],"regex":"","selector":"span.bmGggf","type":"SelectorText"},{"id":"zillow_email","multiple":false,"parentSelectors":["_root"],"regex":"","selector":"a[href^='mailto:']","type":"SelectorText"},{"id":"zillow_address","multiple":false,"parentSelectors":["_root"],"regex":"","selector":"div.cJVBTO a[href^='https://maps.google.com']","type":"SelectorText"}]}
