@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Load the Excel files
-first_df = pd.read_excel("remainfinal.xlsx")
-second_df = pd.read_excel("work.xlsx")
+first_df = pd.read_excel("main.xlsx")
+second_df = pd.read_excel("second.xlsx")
 
 # Specify the column to compare (replace 'column_name' with the actual column)
 column_name = 'email'

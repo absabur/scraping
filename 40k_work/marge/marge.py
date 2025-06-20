@@ -1,11 +1,11 @@
 import pandas as pd
 
 # Load the main file and second file
-main_df = pd.read_excel("main.xlsx")
-second_df = pd.read_excel("second.xlsx")
+main_df = pd.read_excel("main_file.xlsx")
+second_df = pd.read_excel("second_file.xlsx")
 
 # Define the common column name
-key_column = "zillow_profile"
+key_column = "Organization"
 # unique_column = "License Number"
 
 # Remove rows where the key column is empty
