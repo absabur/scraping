@@ -10,9 +10,7 @@ import pyautogui
 import logging
 
 # Configure logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Initialize WebDriver with debugging options
 options = webdriver.ChromeOptions()
@@ -23,7 +21,6 @@ driver = webdriver.Chrome(options=options)
 # %LOCALAPPDATA%
 # chrome://version/
 # https://chatgpt.com/c/dcbf62ec-e118-4299-a10c-4c182966cd8c
-
 
 def detect_recaptcha(soup):
     print("=======================")
@@ -38,10 +35,7 @@ def detect_recaptcha(soup):
         return True
     return False
 
-
-def get_first_linkedin_profile(
-    keyword, matchKeyword="", matchKeyword2="", matchKeyword3=""
-):
+def get_first_linkedin_profile(keyword, matchKeyword):
     """Search Google for a keyword and return the first valid LinkedIn profile link."""
     data = {
         "linkedin_name": "",
@@ -53,30 +47,28 @@ def get_first_linkedin_profile(
 
     try:
         driver.get(f"https://www.google.com/search?q={keyword}")
-
+        
         soup = BeautifulSoup(driver.page_source, "html.parser")
         count = 1
-
+        
         while detect_recaptcha(soup):
             print("CAPTCHA detected. Please solve it manually.")
             if count % 7 == 0:
                 time.sleep(100)
             if count >= 2:
-                driver.get(f"https://www.google.com/search?q={keyword}")
+                driver.get(f"https://www.google.com/search?q={keyword}")        
                 soup = BeautifulSoup(driver.page_source, "html.parser")
                 # pyautogui.click(1373, 10)
                 time.sleep(1)
-
+                
             time.sleep(0.5)
             pyautogui.click(51, 194)
             time.sleep(1)
-            pyautogui.click(253, 651)
+            pyautogui.click(253, 655)
             time.sleep(5)
-            count += 1
-
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, '//a[@jsname="UWckNb"]'))
-        )
+            count+=1
+            
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//a[@jsname="UWckNb"]')))
 
         results = driver.find_elements(By.XPATH, '//a[@jsname="UWckNb"]')
         if not results:
@@ -85,7 +77,7 @@ def get_first_linkedin_profile(
 
         def preprocess(text):
             """Preprocess text for keyword matching."""
-            cleaned_text = re.sub(r"[^a-zA-Z\s]", "", text)
+            cleaned_text = re.sub(r'[^a-zA-Z\s]', '', text)
             return set(cleaned_text.lower().split())
 
         for result in results:
@@ -94,40 +86,28 @@ def get_first_linkedin_profile(
                 continue
 
             if "linkedin.com/in/" in url:
-                title = result.find_element(By.XPATH, ".//h3").text
-                title_words = set(preprocess(title))
-
-                # Three match keyword sets
-                keywords_list = [
-                    ("match_linkedin_full", preprocess(keyword)),
-                    ("match_linkedin_name", preprocess(matchKeyword)),
-                    ("match_linkedin_title", preprocess(matchKeyword2)),
-                    ("match_linkedin_company", preprocess(matchKeyword3)),
-                ]
-
-                # Initialize result dictionary
-                result_data = {}
-
-                # Loop through all 3 keyword sets and calculate match %
-                for col_name, keyword_set in keywords_list:
-                    if len(keyword_set) == 0:
-                        percent = "0%"
-                    else:
-                        matched = sum(1 for kw in keyword_set if kw in title_words)
-                        percent = f"{round((matched / len(keyword_set)) * 100, 2)}%"
-                    result_data[col_name] = percent
-
-                # Update data with final info
-                data.update(
-                    {
-                        "linkedin_title": title,
-                        "linkedinProfile": url,
-                        "linkedin_name": title.split("-")[0].strip(),
-                        **result_data,  # Unpack all 3 match percentages
-                    }
+                title = result.find_element(By.XPATH, './/h3').text
+                keywords1 = preprocess(title)
+                keywords2 = preprocess(matchKeyword)
+                keywords1_name = preprocess(title.partition(" - ")[0].strip())
+                keywords2_name = preprocess(matchKeyword.partition(" - ")[0].strip())
+                matching_keywords = [kw for kw in keywords2 if kw in keywords1]
+                match_percentage = (
+                    f"{round((len(matching_keywords) / len(keywords2)) * 100, 2)}%"
                 )
+                matching_keywords_name = [
+                    kw for kw in keywords2_name if kw in keywords1_name
+                ]
+                match_percentage_name = f"{round((len(matching_keywords_name) / len(keywords2_name)) * 100, 2)}%"
+                data.update({
+                    "linkedin_title": title,
+                    "linkedinProfile": url,
+                    "match_linkedin_full": match_percentage,
+                    "match_linkedin_name": match_percentage_name,
+                    "linkedin_name": title.split("-")[0].strip()
+                })
                 break
-
+            
         for result in results:
             url = result.get_attribute("href")
             if url and "linkedin.com/posts/" in url:
@@ -145,7 +125,6 @@ def get_first_linkedin_profile(
 
     return data
 
-
 def process_keywords(input_file, output_file):
     """Process keywords and save LinkedIn profile URLs to an output file."""
     try:
@@ -155,27 +134,32 @@ def process_keywords(input_file, output_file):
 
         results = []
         for count, (_, row) in enumerate(keywords_df.iterrows()):
-            # if count >= 30:  # Limit to 5 iterations for testing
+            
+            # if count >= 4:  # Limit to 5 iterations for testing
             #     break
-            if count % 15 == 0:  # Limit to 5 iterations for testing
+            
+            if count % 7 == 0:  # Limit to 5 iterations for testing
                 time.sleep(15)
-
+            
             # if row["Company Name"] == "":
             #     continue
-
-            keyword = f"{row["Name"]} - {row["Title"]} - {row["Company On Badge"]}"
-            logging.info(f"Processing keyword ({count}): {keyword}")
-            url_data = get_first_linkedin_profile(
-                keyword, row["Name"], row["Title"], row["Company On Badge"]
-            )
-            results.append({**row.to_dict(), **url_data})
-            time.sleep(1.3)
-
-            if count % 50 == 0:
+            
+            titles = [
+                "General Manager",
+                "Marketing Manager",
+            ]
+            
+            for title in titles:
+                keyword = f"{title} - {row["Cabecera/Company"]}"
+                logging.info(f"Processing keyword ({count}): {keyword}")
+                url_data = get_first_linkedin_profile(keyword, keyword)
+                results.append({**row.to_dict(), **url_data})
+                time.sleep(1.3)
+            
+            
+            if count % 10 == 0:
                 results_df = pd.DataFrame(results)
-                results_df.to_excel(
-                    f"backup-{count}.xlsx", index=False, engine="openpyxl"
-                )
+                results_df.to_excel(f"backup-{count}.xlsx", index=False, engine="openpyxl")
                 logging.info(f"Results saved to {f"backup-{count}.xlsx"}")
 
         results_df = pd.DataFrame(results)
@@ -191,9 +175,8 @@ def process_keywords(input_file, output_file):
         logging.info(f"Results saved to {output_file}")
         driver.quit()
 
-
 # Example usage
 input_excel = "input.xlsx"  # Input file with keywords
-output_excel = "final.xlsx"  # Output file to save URLs
+output_excel = "1st.xlsx"  # Output file to save URLs
 process_keywords(input_excel, output_excel)
 # print(pyautogui.position())
