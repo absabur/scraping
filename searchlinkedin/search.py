@@ -68,9 +68,9 @@ def get_first_linkedin_profile(
                 time.sleep(1)
 
             time.sleep(0.5)
-            pyautogui.click(51, 194)
+            pyautogui.click(55, 194)
             time.sleep(1)
-            pyautogui.click(253, 651)
+            pyautogui.click(205, 347)
             time.sleep(5)
             count += 1
 
@@ -163,11 +163,17 @@ def process_keywords(input_file, output_file):
             # if row["Company Name"] == "":
             #     continue
 
-            keyword = f"{row["Name"]} - {row["Title"]} - {row["Company On Badge"]}"
+            keyword = f"{row["Clean Name"]} - {row["Company+Title"]}"
             logging.info(f"Processing keyword ({count}): {keyword}")
             url_data = get_first_linkedin_profile(
-                keyword, row["Name"], row["Title"], row["Company On Badge"]
+                keyword, row["Clean Name"], "", row["Company+Title"]
             )
+            
+            # keyword = f"{row["full-name"]} - {row["position"]} - {row["company-name"]}"
+            # logging.info(f"Processing keyword ({count}): {keyword}")
+            # url_data = get_first_linkedin_profile(
+            #     keyword, row["full-name"], row["position"], row["company-name"]
+            # )
             results.append({**row.to_dict(), **url_data})
             time.sleep(1.3)
 
